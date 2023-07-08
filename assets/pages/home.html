@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../css/global.css">
+        <link rel="stylesheet" href="../css/home.css">
+        <title>Fin Control</title>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><h2>Fin Control</h2></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Ajustes</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#">Relatórios</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link">Ajuda</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" id="logoutLink" href="../../index.html" title="Sair"><i class="fa-solid fa-arrow-right-from-bracket"></i></a>
+                      </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <main>
+            <p id="welcomeMessage">Bem-vindo(a) de volta, Mariana!</p>
+            <div id="moneyInfo">
+                <table>
+                    <thead>
+                        <tr>
+                            <th><i class="fa-sharp fa-solid fa-coins"></i></th>
+                            <th><i class="fa-regular fa-calendar"></i></th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td id="totalMoneyAmount">3200,00</td>
+                            <td id="currentlyMonth"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <span id="divisor">
+                <i class="fa-solid fa-arrows-rotate"></i>
+                Nova movimentação
+            </span>
+            <form id="addTransactionForm" action="{}">
+                <select id="type" required>
+                    <option selected disabled>Tipo de movimentação</option>
+                    <option value="+">Entrada</option>
+                    <option value="-">Saída</option>
+                </select>
+                <input type="number" placeholder="00,00" id="amount required">
+                <input type="text" placeholder="Origem da entrada" id="origin" disabled>
+                <select id="destinationCategory" disabled>
+                    <option value="default" selected disabled>Categoria do gasto</option>
+                    <option value="Alimentação">Alimentação</option>
+                    <option value="Estudos">Estudos</option>
+                    <option value="Hobbies">Hobbies</option>
+                </select>
+                <input type="date" id="date" required>
+                <button type="reset" id="addTransactionButton">Adicionar</button>
+            </form>
+            <div id="history">
+                <table>
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Valor</th>
+                            <th>Origem/Destino</th>
+                            <th>Data</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr class="positive">
+                            <td>+</td>
+                            <td id="amount">150,00</td>
+                            <td>Auxílio</td>
+                            <td>2023-07-03</td>
+                        </tr>
+                        <tr class="negative">
+                            <td>-</td>
+                            <td id="amount">42,00</td>
+                            <td>Estudos</td>
+                            <td>2023-07-01</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+
+        <script src="../js/addTransaction.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    </body>
+</html>

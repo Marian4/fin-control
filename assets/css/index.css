@@ -1,0 +1,94 @@
+main {
+    width: 60%;
+    height: 100vh;
+    margin: auto calc((100vw - 60%)/2);
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+main h1 {
+    font-size: 2rem;
+}
+
+#appName {
+    color: var(--font-blue);
+    font-weight: 900;
+}
+
+#loginArea {
+    min-width: 25rem;
+    background-color: var(--main-blue);
+    height: 25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+
+    border-radius: 20px 35px 50px 150px;
+    box-shadow: 7px 10px 5px var(--light-gray);
+}
+
+form {
+    width: 18rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+input {
+    height: 2.5rem;
+    margin: 0.5rem 0 1rem 0;
+    border-radius: 8px;
+    padding: 0.5rem;
+    border: transparent;
+}
+
+input:focus {
+    border: transparent;
+}
+
+button {
+    height: 2.5rem;
+    border-radius: 8px;
+    border: transparent;
+    background-color: var(--main-yellow);
+    cursor: pointer;
+    transition: 0.1s;
+}
+
+button:hover {
+    background-color: var(--light-yellow);
+} 
+
+@media(max-width: 700px) {
+    body {
+        background-color: var(--main-blue);
+        max-height: 100vh;
+    }
+
+    main {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    main h1 #appName {
+        color: var(--white);
+    }
+
+    main #loginArea {
+        box-shadow: none;
+        min-width: 0;
+    }
+
+    main #loginArea form {
+        width: 150%;
+    }
+    
+    main input {
+        width: 100%;
+    }
+}

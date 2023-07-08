@@ -1,0 +1,38 @@
+:root {
+    --white: #fff;
+    --main-blue: #83b8ec;
+    --light-blue: #90c8ff;
+    --font-blue: #6495ed;
+    --main-yellow: #ffef61;
+    --light-yellow: #fff38b;
+    --light-gray: #dcdcdc;
+    --light-green: rgba(0, 255, 21, 0.281);
+    --light-red: rgba(255, 0, 0, 0.274);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    width: 100%;
+    font-family: 'Open Sans', sans-serif;
+}
+
+input, button, select {
+    font-family: 'Open Sans', sans-serif;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
